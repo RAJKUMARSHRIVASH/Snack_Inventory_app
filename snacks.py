@@ -38,6 +38,14 @@ def update_snack_availability():
     else:
         print("Snack not found.")
 
+def view_snacks():
+    if not snacks:
+        print("No snacks found.")
+    else:
+        print("Snacks:")
+        for snack in snacks:
+            print(f"Snack ID: {snack.snack_id}, Name: {snack.name}, Price: {snack.price}, Availability: {snack.availability}")
+
 def find_snack_by_id(snack_id):
     for snack in snacks:
         if snack.snack_id == snack_id:
